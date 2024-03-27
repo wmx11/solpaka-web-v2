@@ -5,6 +5,7 @@ import Solpaka from "@/assets/images/solpaka.png";
 import Image from "next/image";
 import baseConfig from "@/util/baseConfig";
 import GlowEffect from "@/components/GlowEffect";
+import TrendUpIcon from "@/components/TrendUpIcon";
 
 const Hero = () => {
   return (
@@ -27,10 +28,14 @@ const Hero = () => {
           </div>
           <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
             <a href={baseConfig.raydium} target="_blank">
-              <button className="btn btn-primary w-full">Get on Raydium</button>
+              <button className="btn btn-primary w-full">
+                Get on Raydium <TrendUpIcon />
+              </button>
             </a>
             <a href={baseConfig.jupiter} target="_blank">
-              <button className="btn btn-primary w-full">Get on Jupiter</button>
+              <button className="btn btn-primary w-full">
+                Get on Jupiter <TrendUpIcon />
+              </button>
             </a>
           </div>
           <div className="flex items-center justify-between flex-wrap gap-4">

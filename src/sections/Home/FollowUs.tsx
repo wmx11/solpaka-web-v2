@@ -15,7 +15,7 @@ const FollowUs = () => {
           <p>
             Follow us on X, join us on Telegram and Discord. Stay up to date
             with the latest news and development of Solpaka. Let's grow this
-            farm
+            farm.
           </p>
           <div className="flex flex-col gap-4 [&>*]:md:max-w-64 items-center [&>*]:w-full">
             <SocialsButtonGroup />

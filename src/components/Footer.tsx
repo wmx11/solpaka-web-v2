@@ -8,7 +8,7 @@ import GlowEffect from "./GlowEffect";
 
 const Footer = () => {
   return (
-    <footer className="py-24 bg-neutral text-neutral-content pattern relative overflow-hidden">
+    <footer className="py-24 bg-neutral text-neutral-content  relative overflow-hidden">
       <Container className="flex justify-center flex-col items-center gap-8">
         <div>
           <Image src={SolpakaText} alt="solpaka logo text" width={200} />

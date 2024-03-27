@@ -2,7 +2,9 @@
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import Title from "@/components/Title";
+import TrendUpIcon from "@/components/TrendUpIcon";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const NFT = () => {
@@ -56,23 +58,11 @@ const NFT = () => {
             </p>
           </p>
           <div>
-            <button className="btn btn-primary">
-              Mint your OG NFT{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
-                />
-              </svg>
-            </button>
+            <Link href="/nft">
+              <button className="btn btn-primary">
+                Mint your OG NFT <TrendUpIcon />
+              </button>
+            </Link>
           </div>
         </div>
         <div></div>
