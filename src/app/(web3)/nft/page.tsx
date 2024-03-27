@@ -11,6 +11,7 @@ import NFT_2 from "./_assets/9.png";
 import AboutNFT from "./_components/AboutNFT";
 import MintNFT from "./_components/MintNFT";
 import NFTStats from "./_components/NFTStats";
+import MintedImage from "./_components/MintedImage";
 
 const page = () => {
   return (
@@ -41,6 +42,7 @@ const page = () => {
           <div className="flex-1 ">
             <Title>OG Solpaka NFTs</Title>
             <div className="stack group">
+              <MintedImage />
               <Image
                 src={NFT_1}
                 alt="OG Solpaka NFT 1"
@@ -65,7 +67,9 @@ const page = () => {
             <div className="mb-8">
               <AboutNFT />
             </div>
-            <MintNFT />
+            <div className="space-y-4 mb-8 card bg-accent backdrop-blur-sm p-4 shadow-lg text-accent-content">
+              <MintNFT />
+            </div>
           </div>
         </div>
         <NFTStats />

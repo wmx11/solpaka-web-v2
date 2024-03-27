@@ -19,6 +19,9 @@ const baseConfig = {
     "https://raydium.io/swap/?inputCurrency=sol&outputCurrency=BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo&fixed=in",
   jupiter:
     "https://jup.ag/swap/SOL-SOLPAKA_BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo",
+  rpcEndpoint: process.env.NEXT_PUBLIC_RPC_URL || "",
+  candyMachineId: process.env.NEXT_PUBLIC_CANDY_MACHINE_ID || "",
+  decimals: 1000000000,
 };
 
 export default baseConfig;

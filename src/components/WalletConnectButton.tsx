@@ -10,7 +10,7 @@ const WalletConnectButton = () => {
       ssr: false,
     }
   );
-  return <DynamicButton />;
+  return <DynamicButton className="btn btn-secondary" />;
 };
 
 export default WalletConnectButton;
