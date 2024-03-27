@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Short_Stack } from "next/font/google";
 import "../globals.css";
+import Web3Providers from "@/providers/Web3Providers";
 
 const font = Short_Stack({ subsets: ["latin"], weight: ["400"] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="cupcake">
       <body className={font.className}>
-        <main>{children}</main>
+        <Web3Providers>
+          <main>{children}</main>
+        </Web3Providers>
       </body>
     </html>
   );
