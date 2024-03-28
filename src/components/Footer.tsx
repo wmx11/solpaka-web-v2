@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./Container";
-import navigation from "./NavBar/navigation";
+import navigation from "../util/navigation";
 import SolpakaText from "@/assets/images/solpaka-text.png";
 import Image from "next/image";
 import NavItem from "./NavItem";

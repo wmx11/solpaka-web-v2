@@ -13,9 +13,6 @@ const AboutNFT = () => {
           <strong>Total supply: </strong> <u>1,000</u>
         </p>
         <p>
-          <strong>Price per NFT: </strong> <u>0.5 SOL</u>
-        </p>
-        <p>
           <strong>Max per wallet: </strong> <u>10 NFTs</u>
         </p>
         <p>

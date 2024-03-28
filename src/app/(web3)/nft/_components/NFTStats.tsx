@@ -6,7 +6,7 @@ const NFTStats = () => {
   const { data, loading } = useMint();
 
   return (
-    <div className="gap-4 text-center grid grid-cols-4">
+    <div className="gap-4 text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <div className="card shadow-lg p-12 bg-primary/10 backdrop-blur-sm flex flex-col justify-center">
         <div className="text-4xl">
           {loading ? <Loader /> : `${data.minted}/${data.totalSupply}`}
@@ -15,11 +15,7 @@ const NFTStats = () => {
       </div>
       <div className="card shadow-lg p-12 bg-primary/10 backdrop-blur-sm flex flex-col justify-center">
         <div className="text-4xl">
-          {loading ? (
-            <Loader />
-          ) : (
-            `${data.totalSupply - data.minted}/${data.totalSupply}`
-          )}
+          {loading ? <Loader /> : `${data.remaining}/${data.totalSupply}`}
         </div>
         <div>Remaining NFTs</div>
       </div>

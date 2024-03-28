@@ -3,8 +3,6 @@ import Container from "@/components/Container";
 import Section from "@/components/Section";
 import SocialsButtonGroup from "@/components/SocialsButtonGroup";
 import Title from "@/components/Title";
-import baseConfig from "@/util/baseConfig";
-import React from "react";
 
 const FollowUs = () => {
   return (

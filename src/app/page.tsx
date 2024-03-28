@@ -1,6 +1,6 @@
 import About from "@/sections/Home/About";
 import Disclaimer from "@/sections/Home/Disclaimer";
-import FollowUs from "@/sections/Home/FollowUs";
+import FollowUs from "@/sections/Shared/FollowUs";
 import Hero from "@/sections/Home/Hero";
 import Merch from "@/sections/Home/Merch";
 import NFT from "@/sections/Home/NFT";

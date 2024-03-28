@@ -10,7 +10,7 @@ const WalletConnectButton = () => {
       ssr: false,
     }
   );
-  return <DynamicButton className="btn btn-secondary" />;
+  return <DynamicButton className="btn btn-secondary" style={{ zIndex: 10 }} />;
 };
 
 export default WalletConnectButton;

@@ -1,18 +1,17 @@
 "use client";
+import baseConfig from "@/util/baseConfig";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
-import {
-  LedgerWalletAdapter,
-  SolflareWalletAdapter,
-  PhantomWalletAdapter,
-} from "@solana/wallet-adapter-wallets";
 import "@solana/wallet-adapter-react-ui/styles.css";
-import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
-import React, { FC, PropsWithChildren, useMemo } from "react";
-import baseConfig from "@/util/baseConfig";
+import {
+  PhantomWalletAdapter,
+  SolflareWalletAdapter,
+} from "@solana/wallet-adapter-wallets";
+import { FC, PropsWithChildren, useMemo } from "react";
 
 interface Props extends PropsWithChildren {}
 
@@ -29,11 +28,7 @@ const Web3Providers: FC<Props> = ({ children }) => {
   const endpoint = baseConfig.rpcEndpoint;
 
   const wallets = useMemo(
-    () => [
-      new PhantomWalletAdapter(),
-      new LedgerWalletAdapter(),
-      new SolflareWalletAdapter({ network }),
-    ],
+    () => [new PhantomWalletAdapter(), new SolflareWalletAdapter({ network })],
     [network]
   );
 

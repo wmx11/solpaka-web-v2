@@ -13,7 +13,7 @@ const useUmi = () => {
     .use(mplTokenMetadata())
     .use(mplCandyMachine());
 
-  return { umi };
+  return { umi, wallet };
 };
 
 export default useUmi;

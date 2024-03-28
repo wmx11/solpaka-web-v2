@@ -1,11 +1,17 @@
+import useStore from "@/store/useStore";
+import baseConfig from "@/util/baseConfig";
 import {
   CandyGuard,
   CandyMachine,
-  DefaultGuardSetMintArgs,
   fetchCandyGuard,
   fetchCandyMachine,
   mintV2,
 } from "@metaplex-foundation/mpl-candy-machine";
+import {
+  fetchDigitalAsset,
+  TokenStandard,
+} from "@metaplex-foundation/mpl-token-metadata";
+import { setComputeUnitLimit } from "@metaplex-foundation/mpl-toolbox";
 import {
   generateSigner,
   publicKey,
@@ -14,17 +20,11 @@ import {
   unwrapOption,
 } from "@metaplex-foundation/umi";
 import { useEffect, useState } from "react";
+import { useToast } from "./useToast";
 import useUmi from "./useUmi";
-import baseConfig from "@/util/baseConfig";
-import { setComputeUnitLimit } from "@metaplex-foundation/mpl-toolbox";
-import {
-  fetchDigitalAsset,
-  TokenStandard,
-} from "@metaplex-foundation/mpl-token-metadata";
-import useStore from "@/app/store/useStore";
 
 const useMint = () => {
-  const { umi } = useUmi();
+  const { umi, wallet } = useUmi();
   const setNft = useStore((state) => state.setNft);
   const setImage = useStore((state) => state.setImage);
   const nftImage = useStore((state) => state.image);
@@ -33,12 +33,16 @@ const useMint = () => {
   const [message, setMessage] = useState("");
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
   const [candyGuard, setCandyGuard] = useState<CandyGuard>();
+  const [userBalance, setUserBalance] = useState(0);
 
   const [data, setData] = useState({
     totalSupply: 0,
     minted: 0,
     solPrice: 0,
+    remaining: 0,
   });
+
+  const { toast } = useToast();
 
   const getMintData = async () => {
     setError([""]);
@@ -79,10 +83,14 @@ const useMint = () => {
       solPrice = Number(lamports.basisPoints) / baseConfig.decimals;
     }
 
+    const remaining =
+      candyMachine.itemsLoaded - Number(candyMachine.itemsRedeemed);
+
     setData((prev) => ({
       ...prev,
       totalSupply: candyMachine.itemsLoaded,
       minted: Number(candyMachine.itemsRedeemed),
+      remaining,
       solPrice,
     }));
 
@@ -90,11 +98,19 @@ const useMint = () => {
   };
 
   const getBalance = async () => {
-    const balance = await umi.rpc.getBalance(umi.identity.publicKey);
-    if (!balance) {
-      return 0;
+    if (!umi) {
+      return;
     }
-    return Number(balance.basisPoints) / baseConfig.decimals;
+
+    await wallet.connect();
+    
+    const balance = await umi.rpc.getBalance(umi.identity.publicKey);
+
+    if (!balance) {
+      setUserBalance(0);
+    }
+
+    setUserBalance(Number(balance.basisPoints) / baseConfig.decimals);
   };
 
   const mint = async () => {
@@ -110,11 +126,7 @@ const useMint = () => {
       const solPaymentGuard = candyGuard?.guards?.solPayment;
       const solPayment = solPaymentGuard && unwrapOption(solPaymentGuard);
 
-      const mintArgs: Partial<DefaultGuardSetMintArgs> = {
-        mintLimit: some({
-          id: 1,
-        }),
-      };
+      const mintArgs = baseConfig.mintArgs;
 
       if (solPayment) {
         const treasury = solPayment.destination;
@@ -152,9 +164,16 @@ const useMint = () => {
       setNft(nft);
       setImage(image);
 
-      setMessage(
-        "You have minted your very own OG Solpaka NFT! Congratulations!"
-      );
+      const message =
+        "You have minted your very own OG Solpaka NFT! Congratulations!";
+
+      toast({
+        title: "Congratulations, Solpakian!",
+        description: message,
+        variant: "default",
+      });
+
+      setMessage(message);
     } catch (error: any) {
       console.error(error);
       setError((prev) => [...prev, `Mint was unsuccessful, ${error?.message}`]);
@@ -165,6 +184,7 @@ const useMint = () => {
 
   useEffect(() => {
     getMintData();
+    getBalance();
   }, [nftImage, message]);
 
   return {
@@ -175,6 +195,7 @@ const useMint = () => {
     umi,
     candyMachine,
     candyGuard,
+    userBalance,
     getMintData,
     getBalance,
     mint,

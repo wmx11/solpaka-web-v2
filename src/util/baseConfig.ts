@@ -1,3 +1,6 @@
+import { DefaultGuardSetMintArgs } from "@metaplex-foundation/mpl-candy-machine";
+import { some } from "@metaplex-foundation/umi";
+
 const baseConfig = {
   contractAddress: "BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo",
   explorerToken: "https://solscan.io/token",
@@ -22,6 +25,11 @@ const baseConfig = {
   rpcEndpoint: process.env.NEXT_PUBLIC_RPC_URL || "",
   candyMachineId: process.env.NEXT_PUBLIC_CANDY_MACHINE_ID || "",
   decimals: 1000000000,
+  mintArgs: {
+    mintLimit: some({
+      id: 1,
+    }),
+  } as Partial<DefaultGuardSetMintArgs>,
 };
 
 export default baseConfig;
