@@ -29,6 +29,9 @@ const baseConfig = {
     mintLimit: some({
       id: 1,
     }),
+    tokenGate: some({
+      mint: "BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo",
+    }),
   } as Partial<DefaultGuardSetMintArgs>,
 };
 
