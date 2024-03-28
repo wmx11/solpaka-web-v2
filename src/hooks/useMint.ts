@@ -11,7 +11,10 @@ import {
   fetchDigitalAsset,
   TokenStandard,
 } from "@metaplex-foundation/mpl-token-metadata";
-import { setComputeUnitLimit } from "@metaplex-foundation/mpl-toolbox";
+import {
+  setComputeUnitLimit,
+  setComputeUnitPrice,
+} from "@metaplex-foundation/mpl-toolbox";
 import {
   generateSigner,
   publicKey,
@@ -24,7 +27,7 @@ import { useToast } from "./useToast";
 import useUmi from "./useUmi";
 
 const useMint = () => {
-  const { umi, wallet } = useUmi();
+  const { umi } = useUmi();
   const setNft = useStore((state) => state.setNft);
   const setImage = useStore((state) => state.setImage);
   const nftImage = useStore((state) => state.image);
@@ -102,8 +105,6 @@ const useMint = () => {
       return;
     }
 
-    await wallet.connect();
-    
     const balance = await umi.rpc.getBalance(umi.identity.publicKey);
 
     if (!balance) {
@@ -137,6 +138,7 @@ const useMint = () => {
 
       const transaction = transactionBuilder()
         .add(setComputeUnitLimit(umi, { units: 800_000 }))
+        .add(setComputeUnitPrice(umi, { microLamports: 1000 }))
         .add(
           mintV2(umi, {
             candyMachine: candyMachine.publicKey,
@@ -149,14 +151,23 @@ const useMint = () => {
           })
         );
 
-      await transaction.sendAndConfirm(umi, {
+      console.log("Sending transaction -> ", transaction);
+
+      const confirmation = await transaction.sendAndConfirm(umi, {
         confirm: { commitment: "finalized" },
         send: {
           skipPreflight: true,
         },
       });
 
+      console.log("Confirmation received -> ", confirmation);
+
+      console.log("Fetching NFT data -> ", confirmation);
+
       const nft = await fetchDigitalAsset(umi, nftSigner.publicKey);
+
+      console.log("NFT Received -> ", nft);
+
       const uri = await fetch(nft.metadata.uri);
       const json = await uri.json();
       const image = json.image;

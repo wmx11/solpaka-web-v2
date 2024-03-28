@@ -8,6 +8,8 @@ import { useWallet } from "@solana/wallet-adapter-react";
 const useUmi = () => {
   const wallet = useWallet();
 
+  wallet.connect();
+
   const umi = createUmi(baseConfig.rpcEndpoint)
     .use(walletAdapterIdentity(wallet))
     .use(mplTokenMetadata())
