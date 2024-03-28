@@ -137,8 +137,8 @@ const useMint = () => {
       }
 
       const transaction = transactionBuilder()
-        .add(setComputeUnitLimit(umi, { units: 800_000 }))
-        .add(setComputeUnitPrice(umi, { microLamports: 1000 }))
+        .add(setComputeUnitLimit(umi, { units: 950_000 }))
+        .add(setComputeUnitPrice(umi, { microLamports: 10000000 })) // microLamport 0.00001, 1 SOL = 100,000,000 lamports, 0.01 SOL = 10,000 lamports
         .add(
           mintV2(umi, {
             candyMachine: candyMachine.publicKey,
@@ -154,7 +154,9 @@ const useMint = () => {
       console.log("Sending transaction -> ", transaction);
 
       const confirmation = await transaction.sendAndConfirm(umi, {
-        confirm: { commitment: "finalized" },
+        confirm: {
+          commitment: "finalized",
+        },
         send: {
           skipPreflight: true,
         },
