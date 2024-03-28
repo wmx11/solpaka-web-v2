@@ -49,7 +49,7 @@ const NFT = () => {
               </p>
             </p>
             <p>
-              💉​ ​Liquidiy pool injections.
+              💉​ ​Liquidity pool injections.
               <p className="text-xs">
                 Solpaka started with a shallow liquidity pool. The price gets
                 all over the place from a few disgruntled whales. The funds from
