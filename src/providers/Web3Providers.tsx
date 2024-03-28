@@ -10,6 +10,8 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
+  TrustWalletAdapter,
+  WalletConnectWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import { FC, PropsWithChildren, useMemo } from "react";
 
@@ -28,13 +30,21 @@ const Web3Providers: FC<Props> = ({ children }) => {
   const endpoint = baseConfig.rpcEndpoint;
 
   const wallets = useMemo(
-    () => [new PhantomWalletAdapter(), new SolflareWalletAdapter({ network })],
+    () => [
+      new PhantomWalletAdapter(),
+      new TrustWalletAdapter(),
+      new WalletConnectWalletAdapter({
+        network: WalletAdapterNetwork.Mainnet,
+        options: {},
+      }),
+      new SolflareWalletAdapter({ network }),
+    ],
     [network]
   );
 
   return (
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
+      <WalletProvider wallets={wallets} autoConnect >
         <WalletModalProvider>{children}</WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
