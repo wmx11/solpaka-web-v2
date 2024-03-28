@@ -44,8 +44,11 @@ const NFT = () => {
               🚪​ Members-only access.
               <p className="text-xs">
                 Solpaka farm is set to expand and open new doors for its
-                members. NFT holders will get access to the new community hubs,
-                VC hubs, alpha groups, and even early access into new projects.
+                members.{" "}
+                <u>
+                  NFT holders will get access to the new community hubs, VC
+                  hubs, alpha groups, and even early access into new projects.
+                </u>
               </p>
             </p>
             <p>
