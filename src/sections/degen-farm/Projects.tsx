@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import MordyProject from "@/assets/projects/mordy-blur.png";
 import Card from "@/components/Card";
 import Container from "@/components/Container";

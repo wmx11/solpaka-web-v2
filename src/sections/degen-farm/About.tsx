@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import Title from "@/components/Title";

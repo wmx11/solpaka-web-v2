@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import NFTImage from "@/assets/images/nfts.png";
 import Card from "@/components/Card";
 import Container from "@/components/Container";

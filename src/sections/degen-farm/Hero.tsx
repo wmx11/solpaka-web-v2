@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import DegenFarmImage from "@/assets/images/degen-farm.png";
 import Card from "@/components/Card";
 import Container from "@/components/Container";
