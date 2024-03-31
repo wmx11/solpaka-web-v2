@@ -1,8 +1,7 @@
 import Container from "@/components/Container";
 import Section from "@/components/Section";
-import React from "react";
-import baseConfig from "@/util/baseConfig";
 import Title from "@/components/Title";
+import baseConfig from "@/util/baseConfig";
 
 const TokenInformation = () => {
   return (

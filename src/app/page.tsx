@@ -1,12 +1,11 @@
-import About from "@/sections/Home/About";
-import Disclaimer from "@/sections/Home/Disclaimer";
-import FollowUs from "@/sections/Shared/FollowUs";
-import Hero from "@/sections/Home/Hero";
-import Merch from "@/sections/Home/Merch";
-import NFT from "@/sections/Home/NFT";
-import Roadmap from "@/sections/Home/Roadmap";
-import TokenInformation from "@/sections/Home/TokenInformation";
-import Tokenomics from "@/sections/Home/Tokenomics";
+import About from "@/sections/home/About";
+import DegenFarm from "@/sections/home/DegenFarm";
+import Hero from "@/sections/home/Hero";
+import Merch from "@/sections/home/Merch";
+import NFT from "@/sections/home/NFT";
+import Roadmap from "@/sections/home/Roadmap";
+import TokenInformation from "@/sections/home/TokenInformation";
+import Tokenomics from "@/sections/home/Tokenomics";
 
 export default function Home() {
   return (
@@ -16,10 +15,9 @@ export default function Home() {
       <TokenInformation />
       <Tokenomics />
       <NFT />
+      <DegenFarm />
       <Merch />
       <Roadmap />
-      <FollowUs />
-      <Disclaimer />
     </>
   );
 }

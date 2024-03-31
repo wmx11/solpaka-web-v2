@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 import GlowEffect from "@/components/GlowEffect";
 import Section from "@/components/Section";
 import Title from "@/components/Title";
-import FollowUs from "@/sections/Shared/FollowUs";
+import FollowUs from "@/sections/shared/FollowUs";
 import Image from "next/image";
 import NFT_1 from "./_assets/0.png";
 import NFT_3 from "./_assets/13.png";

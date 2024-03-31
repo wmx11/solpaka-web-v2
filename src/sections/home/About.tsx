@@ -2,7 +2,6 @@ import Container from "@/components/Container";
 import Section from "@/components/Section";
 import SocialsButtonGroup from "@/components/SocialsButtonGroup";
 import Title from "@/components/Title";
-import React from "react";
 
 const About = () => {
   return (

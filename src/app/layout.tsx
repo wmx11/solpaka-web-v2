@@ -3,6 +3,8 @@ import { Short_Stack } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import Disclaimer from "@/sections/shared/Disclaimer";
+import FollowUs from "@/sections/shared/FollowUs";
 
 const font = Short_Stack({ subsets: ["latin"], weight: ["400"] });
 
@@ -22,6 +24,8 @@ export default function RootLayout({
       <body className={font.className}>
         <NavBar />
         <main>{children}</main>
+        <FollowUs />
+        <Disclaimer />
         <Footer />
       </body>
     </html>

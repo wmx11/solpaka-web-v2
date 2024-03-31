@@ -1,18 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
-import Container from "@/components/Container";
-import Section from "@/components/Section";
 import Solpaka from "@/assets/images/solpaka.png";
-import Image from "next/image";
-import baseConfig from "@/util/baseConfig";
+import Container from "@/components/Container";
 import GlowEffect from "@/components/GlowEffect";
+import Section from "@/components/Section";
 import TrendUpIcon from "@/components/TrendUpIcon";
+import baseConfig from "@/util/baseConfig";
+import Image from "next/image";
+import TokenPromises from "../shared/TokenPromises";
 
 const Hero = () => {
   return (
     <Section className="min-h-screen pattern-circles relative overflow-hidden">
       <Container className="flex flex-col-reverse md:flex-row flex-wrap gap-4 items-center justify-between z-10 relative">
         <div className="flex-1 space-y-8">
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-5xl md:text-6xl font-bold">
             SOLPAKA aims to become the official "Unofficial" Solana mascot!
           </h1>
           <h2 className="text-xl">
@@ -20,12 +21,7 @@ const Hero = () => {
             <br />
             Get SOLPAKA. Chill with SOLPAKA. Be a SOLPAKIAN. Grow fleece.
           </h2>
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <p>🔓 Liquidity LOCKED!</p>
-            <p>💪​ Solid community!</p>
-            <p>🙏 No rugs!</p>
-            <p>🔥​ Long-term approach!</p>
-          </div>
+          <TokenPromises />
           <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
             <a href={baseConfig.raydium} target="_blank">
               <button className="btn btn-primary w-full">

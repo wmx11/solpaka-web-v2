@@ -15,6 +15,11 @@ const navigation = [
     target: "",
   },
   {
+    label: "Degen Farm",
+    href: "#degen-farm",
+    target: "",
+  },
+  {
     label: "Merch",
     href: "#merch",
     target: "",

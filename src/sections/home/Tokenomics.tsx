@@ -1,20 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
+import PumpImage from "@/assets/images/pump_2.jpg";
+import Card from "@/components/Card";
 import Container from "@/components/Container";
+import GlowEffect from "@/components/GlowEffect";
 import Section from "@/components/Section";
 import Title from "@/components/Title";
-import PumpImage from "@/assets/images/pump_2.jpg";
-import React from "react";
 import Image from "next/image";
-import GlowEffect from "@/components/GlowEffect";
 
 const Tokenomics = () => {
   return (
     <Section
-      className="bg-primary pattern relative overflow-hidden"
+      className="bg-primary pattern relative overflow-clip"
       id="tokenomics"
     >
-      <Container className="flex flex-col md:flex-row flex-wrap gap-4">
-        <div className="flex-1 md:sticky top-10 h-full">
+      <Container className="flex flex-col md:flex-row flex-wrap gap-8">
+        <div className="flex-1 md:sticky top-20 h-full">
           <Title>Farm Tokenomics</Title>
           <div className="space-y-4">
             <p>
@@ -54,9 +54,9 @@ const Tokenomics = () => {
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center">
-          <div className="card overflow-hidden shadow-xl">
-            <Image src={PumpImage} alt="solpaka pumping" width={500} />
-          </div>
+          <Card className="p-0 overflow-hidden shadow-xl">
+            <Image src={PumpImage} alt="solpaka pumping" width={650} />
+          </Card>
         </div>
       </Container>
       <GlowEffect className="bg-purple-500 top-[-200px] right-[-200px]" />

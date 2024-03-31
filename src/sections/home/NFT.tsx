@@ -3,9 +3,8 @@ import Container from "@/components/Container";
 import Section from "@/components/Section";
 import Title from "@/components/Title";
 import TrendUpIcon from "@/components/TrendUpIcon";
-import Image from "next/image";
+import routes from "@/util/routes";
 import Link from "next/link";
-import React from "react";
 
 const NFT = () => {
   return (
@@ -61,7 +60,7 @@ const NFT = () => {
             </p>
           </p>
           <div>
-            <Link href="/nft">
+            <Link href={routes.nft}>
               <button className="btn btn-primary">
                 Mint your OG NFT <TrendUpIcon />
               </button>

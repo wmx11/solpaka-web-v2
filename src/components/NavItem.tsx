@@ -1,3 +1,5 @@
+"use client";
+import { usePathname, useRouter } from "next/navigation";
 import React, { FC } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -9,8 +11,23 @@ const NavItem: FC<Props> = ({
   className,
   children,
 }) => {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (pathname === "/" || href === "#follow-us") {
+      return;
+    }
+    router.push("/".concat(href || "#"));
+  };
+
   return (
-    <a href={href} target={target} className={twMerge("link", className)}>
+    <a
+      href={href}
+      target={target}
+      className={twMerge("link", className)}
+      onClick={handleClick}
+    >
       {children}
     </a>
   );
