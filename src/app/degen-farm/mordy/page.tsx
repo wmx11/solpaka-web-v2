@@ -8,7 +8,20 @@ import TrendUpIcon from "@/components/TrendUpIcon";
 import TokenPromises from "@/sections/shared/TokenPromises";
 import baseConfig from "@/util/baseConfig";
 import routes from "@/util/routes";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "MORDY The Dog",
+  description: "",
+  openGraph: {
+    description:
+      "The Degen Farm is a Solpaka product similar to a managed launchpad. Degen Farm aims to release farm-related projects that fit the narrative and are meant to leverage the current hype wave in the market.",
+    images: "https://solpaka.com/assets/meta/mordy-meta.png",
+    title: "SOLPAKA - The Degen Farm",
+    url: "https://solpaka.com/degen-farm/mordy",
+  },
+};
 
 const page = () => {
   return (

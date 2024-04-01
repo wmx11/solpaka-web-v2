@@ -7,9 +7,16 @@ import { Toaster } from "@/components/Toaster";
 const font = Short_Stack({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "SOLPAKA - More Than A Meme Token",
+  title: "OG Solpaka NFT Collection",
   description:
-    "SOLPAKA is a community-driven token aiming to build a strong and vibrant community in the Solana ecosystem. SOLPAKA is a meme coin but it does not stop it from being one of the most loved and admired tokens on Solana. SOLPAKA aims to build a strong foundation of open-minded people and continue building and investing in new, long-term projects.",
+    "These NFTs were created to help Solpaka grow and expand its farm. NFT holders will support the project's growth which will have a positive impact on their Solpaka tokens.",
+  openGraph: {
+    description:
+      "These NFTs were created to help Solpaka grow and expand its farm. NFT holders will support the project's growth which will have a positive impact on their Solpaka tokens.",
+    images: "https://solpaka.com/assets/meta/nfts-meta.png",
+    title: "SOLPAKA - OG Solpaka NFT Collection",
+    url: "https://solpaka.com/nft",
+  },
 };
 
 export default function RootLayout({
