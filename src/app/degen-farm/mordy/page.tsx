@@ -1,10 +1,14 @@
-import DegenFarmImage from "@/assets/images/degen-farm.png";
+import DegenFarmImage from "@/assets/projects/mordy.png";
+import { GetOnJupiterButton, GetOnRaydiumButton } from "@/components/Button";
 import Card from "@/components/Card";
 import Container from "@/components/Container";
 import GlowEffect from "@/components/GlowEffect";
 import Section from "@/components/Section";
+import TelegramLogo from "@/components/TelegramLogo";
 import Title from "@/components/Title";
 import TrendUpIcon from "@/components/TrendUpIcon";
+import TwitterLogo from "@/components/TwitterLogo";
+import EnjoyOGNFTBenefits from "@/sections/shared/EnjoyOGNFTBenefits";
 import TokenPromises from "@/sections/shared/TokenPromises";
 import baseConfig from "@/util/baseConfig";
 import routes from "@/util/routes";
@@ -12,11 +16,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "MORDY The Dog",
-  description: "",
+  title: "Mordy The Dog",
+  description:
+    "MORDY The Dog! Guarding the Solpaka farm from those who dare to oppose it. Its name is Moon Or Dusty, based on MoonMoon husky. Join our little furry friend - chill and grow fleece!",
   openGraph: {
     description:
-      "The Degen Farm is a Solpaka product similar to a managed launchpad. Degen Farm aims to release farm-related projects that fit the narrative and are meant to leverage the current hype wave in the market.",
+      "MORDY The Dog! Guarding the Solpaka farm from those who dare to oppose it. Its name is Moon Or Dusty, based on MoonMoon husky. Join our little furry friend - chill and grow fleece!",
     images: "https://solpaka.com/assets/meta/mordy-meta.png",
     title: "SOLPAKA - The Degen Farm",
     url: "https://solpaka.com/degen-farm/mordy",
@@ -26,17 +31,19 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <Section className="flex items-center justify-center min-h-screen pattern-topography relative overflow-hidden">
+      <Section className="flex items-center justify-center min-h-screen pattern-circles relative overflow-clip">
         <Container className="flex flex-col-reverse md:flex-row-reverse flex-wrap gap-4 justify-between z-10 relative">
-          <div className="flex justify-center items-center flex-1">
-            <Card className="p-0 overflow-hidden shadow-lg w-auto">
-              <Image
-                src={DegenFarmImage}
-                alt="degen farm cover"
-                width={650}
-                className="max-w-[650px]"
-              />
-            </Card>
+          <div className="flex justify-center flex-1">
+            <div>
+              <Card className="p-0 overflow-hidden shadow-lg md:sticky top-20">
+                <Image
+                  src={DegenFarmImage}
+                  alt="degen farm cover"
+                  width={650}
+                  className="max-w-[650px]"
+                />
+              </Card>
+            </div>
           </div>
           <div className="flex-1 space-y-8">
             <div>
@@ -61,118 +68,116 @@ const page = () => {
               </a>
               <Title>Mordy</Title>
               <p>
-                <strong>Launch date:</strong> 2023-03-03
+                <strong>Launch date:</strong>{" "}
+                <span>
+                  2023-04-03{" "}
+                  <span className="badge badge-sm badge-error">Not Live</span>
+                </span>
               </p>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem. Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam, nisi ut
-                aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                reprehenderit qui in ea voluptate velit esse quam nihil
-                molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                voluptas nulla pariatur
+                MORDY The Dog! Guarding the Solpaka farm from those who dare to
+                oppose it. Its name is Moon Or Dusty, based on MoonMoon husky.
+                Join our little furry friend - chill and grow fleece!
               </p>
             </div>
 
-            <div>
-              <p className="text-3xl underline  ">Launch details</p>
+            <Card>
+              <p className="text-3xl underline mb-2">Launch details</p>
               <p>
-                <strong>Launch price:</strong> $0.00001143
+                <strong>Launch price:</strong> ~$0.00002286
               </p>
               <p>
                 <strong>Launch liquidity:</strong> $16,000
               </p>
               <p>
-                <strong>Launch market cap</strong>: $11,429
+                <strong>Launch market cap</strong>: ~$22,857
               </p>
               <p>
                 <strong>Circulating supply:</strong> 1,000,000,000
               </p>
-            </div>
+            </Card>
 
-            <div>
-              <p className="text-3xl underline">Token details</p>
+            <Card>
+              <p className="text-3xl underline mb-2">Token details</p>
               <p>
                 📜<strong>Contract address:</strong>{" "}
-                <a href="" target="_blank" className="link break-all">
-                  BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo
+                <a href="#" target="_blank" className="link break-all">
+                  ...
                 </a>
               </p>
               <p>
                 🔓 <strong>Liquidity lock tx:</strong>{" "}
-                <a href="" target="_blank" className="link break-all">
-                  3C7N4aWjWHchp1nCBnYfkPBg4EYzsb4bSFyPFnYw2Ke3W9iFr8htyKV8Wzqre1iC4XD4ePFb8hopw3x3fo8ZWHwW
+                <a href="#" target="_blank" className="link break-all">
+                  ...
                 </a>
               </p>
-            </div>
+            </Card>
 
-            <div>
-              <p className="text-3xl underline">Tokenomics</p>
+            <Card>
+              <p className="text-3xl underline mb-2">Tokenomics</p>
               <p>
                 <strong>Total supply:</strong> 1,000,000,000
               </p>
               <p>
                 <strong>Team allocation:</strong> 200,000,000 (20%)
+                <p className="text-xs italic">
+                  Team allocation is vested for 10 days. Vesting ends on April
+                  13. Team allocation will be used in conjuction with the
+                  marketing allocation.
+                </p>
               </p>
               <p>
-                <strong>Seed allocation:</strong> 100,000,000(10%)
+                <strong>Marketing allocation:</strong> 100,000,000 (10%)
+                <p className="text-xs italic">
+                  Marketing allocation will be used to pay marketing expenses
+                  (listings, tracker updates, influencers, videos, airdrops,
+                  etc.) and will serve as a fund for the upcoming CEX listing of
+                  Solpaka.
+                </p>
               </p>
               <p>
-                <strong>LP Allocation:</strong> 700,000,000(70%)
+                <strong>LP Allocation:</strong> 700,000,000 (70%)
               </p>
-            </div>
-            <div className="space-y-8">
+            </Card>
+            <Card className="space-y-8">
               <p className="text-3xl underline">Links</p>
               <TokenPromises />
-              <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
-                <a href={baseConfig.raydium} target="_blank">
-                  <button className="btn btn-primary w-full">
-                    Get on Raydium <TrendUpIcon />
-                  </button>
+              <div className="flex items-center flex-wrap gap-4">
+                <a href="" target="_blank" className="link">
+                  <span className="badge badge-secondary p-4 gap-2">
+                    <TwitterLogo /> Twitter
+                  </span>
                 </a>
-                <a href={baseConfig.jupiter} target="_blank">
-                  <button className="btn btn-primary w-full">
-                    Get on Jupiter <TrendUpIcon />
-                  </button>
+                <a href="" target="_blank" className="link">
+                  <span className="badge badge-secondary p-4 gap-2">
+                    <TelegramLogo /> Telegram
+                  </span>
                 </a>
               </div>
+
+              <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
+                <GetOnRaydiumButton disabled />
+                <GetOnJupiterButton disabled />
+              </div>
+
               <div className="flex items-center justify-between flex-wrap gap-4">
-                <a
-                  href={baseConfig.dexscreener}
-                  target="_blank"
-                  className="link"
-                >
+                <a href="" target="_blank" className="link">
                   <span>Dexscreener</span>
                 </a>
-                <a href={baseConfig.dextools} target="_blank" className="link">
+                <a href="" target="_blank" className="link">
                   <span>Dextools</span>
                 </a>
-                <a
-                  href={baseConfig.coinmarketcap}
-                  target="_blank"
-                  className="link"
-                >
-                  <span>CoinMarketCap</span>
-                </a>
-                <a href={baseConfig.coingecko} target="_blank" className="link">
-                  <span>CoinGecko</span>
+                <a href="" target="_blank" className="link">
+                  <span>BirdEye</span>
                 </a>
               </div>
-            </div>
+            </Card>
           </div>
         </Container>
         <GlowEffect className="bg-purple-500 top-[-200px] right-[-200px]" />
-        <GlowEffect className="bg-green-500 bottom-[-200px] right-[-200px]" />
-        <GlowEffect className="bg-orange-500 bottom-[-200px] left-[-200px]" />
+        <GlowEffect className="bg-green-500 top-[-200px] left-[-200px]" />
       </Section>
+      <EnjoyOGNFTBenefits />
     </>
   );
 };

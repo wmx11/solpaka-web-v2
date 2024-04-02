@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import Solpaka from "@/assets/images/solpaka.png";
+import { GetOnJupiterButton, GetOnRaydiumButton } from "@/components/Button";
 import Container from "@/components/Container";
 import GlowEffect from "@/components/GlowEffect";
 import Section from "@/components/Section";
-import TrendUpIcon from "@/components/TrendUpIcon";
 import baseConfig from "@/util/baseConfig";
 import Image from "next/image";
 import TokenPromises from "../shared/TokenPromises";
@@ -23,16 +23,8 @@ const Hero = () => {
           </h2>
           <TokenPromises />
           <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
-            <a href={baseConfig.raydium} target="_blank">
-              <button className="btn btn-primary w-full">
-                Get on Raydium <TrendUpIcon />
-              </button>
-            </a>
-            <a href={baseConfig.jupiter} target="_blank">
-              <button className="btn btn-primary w-full">
-                Get on Jupiter <TrendUpIcon />
-              </button>
-            </a>
+            <GetOnRaydiumButton href={baseConfig.raydium} />
+            <GetOnJupiterButton href={baseConfig.jupiter} />
           </div>
           <div className="flex items-center justify-between flex-wrap gap-4">
             <a href={baseConfig.dexscreener} target="_blank" className="link">

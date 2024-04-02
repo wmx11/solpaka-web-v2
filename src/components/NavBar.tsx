@@ -23,14 +23,14 @@ const NavItems: FC<NavItemsProps> = ({ className }) => {
 
 const NavBar = () => {
   return (
-    <nav className="navbar md:items-center justify-between md:justify-center py-2 md:py-6 fixed w-full top-0 bg-base-100 z-50">
-      <div className="hidden md:block">
-        <NavItems />
-      </div>
-      <div className="block md:hidden">
+    <nav className="navbar md:gap-4 md:items-center justify-between md:justify-center py-2 md:py-6 fixed w-full top-0 bg-base-100 z-50">
+      <div className="block">
         <a href="/">
           <Image src={SolpakaText} alt="solpaka logo text" width={60} />
         </a>
+      </div>
+      <div className="hidden md:block">
+        <NavItems />
       </div>
       <div className="dropdown dropdown-end">
         <button className="btn btn-ghost md:hidden">

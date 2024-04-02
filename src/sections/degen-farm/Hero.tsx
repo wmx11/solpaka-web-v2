@@ -30,19 +30,19 @@ const Hero = () => {
 
           <div className="gap-4 text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
             <Card className="border-2 border-yellow-300 shadow-yellow-500 shadow-sm">
-              <div className="text-4xl">0</div>
+              <div className="text-4xl">1</div>
               <div>Farm projects launched</div>
             </Card>
             <Card>
-              <div className="text-4xl">+1,000</div>
+              <div className="text-4xl">+1,100</div>
               <div>Community members</div>
             </Card>
             <Card>
-              <div className="text-4xl">+120</div>
+              <div className="text-4xl">+130</div>
               <div>NFT Holders</div>
             </Card>
             <Card>
-              <div className="text-4xl">+350k</div>
+              <div className="text-4xl">+650k</div>
               <div>SOLPAKA Burned</div>
             </Card>
           </div>

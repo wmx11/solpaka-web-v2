@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { MintNFTButton } from "@/components/Button";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import Title from "@/components/Title";
@@ -60,11 +61,7 @@ const NFT = () => {
             </p>
           </p>
           <div>
-            <Link href={routes.nft}>
-              <button className="btn btn-primary">
-                Mint your OG NFT <TrendUpIcon />
-              </button>
-            </Link>
+            <MintNFTButton />
           </div>
         </div>
         <div></div>

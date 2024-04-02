@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import NFTImage from "@/assets/images/nfts.png";
+import { MintNFTButton } from "@/components/Button";
 import Card from "@/components/Card";
 import Container from "@/components/Container";
 import GlowEffect from "@/components/GlowEffect";
@@ -10,7 +11,7 @@ import routes from "@/util/routes";
 import Image from "next/image";
 import Link from "next/link";
 
-const GetAccess = () => {
+const EnjoyOGNFTBenefits = () => {
   return (
     <Section className="pattern-circles relative overflow-clip">
       <Container>
@@ -40,11 +41,7 @@ const GetAccess = () => {
             </p>
             <p>It's as easy as growing fleece!</p>
             <div>
-              <Link href={routes.nft}>
-                <button className="btn btn-primary">
-                  Mint your OG NFT <TrendUpIcon />
-                </button>
-              </Link>
+              <MintNFTButton />
             </div>
           </div>
         </div>
@@ -56,4 +53,4 @@ const GetAccess = () => {
   );
 };
 
-export default GetAccess;
+export default EnjoyOGNFTBenefits;

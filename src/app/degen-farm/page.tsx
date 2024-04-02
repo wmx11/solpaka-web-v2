@@ -1,5 +1,5 @@
 import About from "@/sections/degen-farm/About";
-import GetAccess from "@/sections/degen-farm/GetAccess";
+import EnjoyOGNFTBenefits from "@/sections/shared/EnjoyOGNFTBenefits";
 import Hero from "@/sections/degen-farm/Hero";
 import Projects from "@/sections/degen-farm/Projects";
 import { Metadata } from "next";
@@ -23,7 +23,7 @@ const page = () => {
       <Hero />
       <Projects />
       <About />
-      <GetAccess />
+      <EnjoyOGNFTBenefits />
     </>
   );
 };
