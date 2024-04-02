@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import MordyProject from "@/assets/projects/mordy-blur.png";
+import MordyProject from "@/assets/projects/mordy.png";
 import Card from "@/components/Card";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
@@ -38,7 +38,7 @@ const Projects = () => {
               </Card>
             </Link>
             <div>
-              <p>...</p>
+              <p>Mordy</p>
               <p className="flex items-start gap-2 flex-wrap">
                 Launch date: 2024-04-03{" "}
                 <span className="badge badge-sm badge-error">Not Live</span>
