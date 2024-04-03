@@ -40,7 +40,7 @@ const page = () => {
                   src={DegenFarmImage}
                   alt="degen farm cover"
                   width={650}
-                  className="max-w-[650px]"
+                  className="w-full max-w-[650px]"
                 />
               </Card>
             </div>

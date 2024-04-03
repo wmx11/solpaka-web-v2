@@ -52,8 +52,8 @@ const Hero = () => {
             <Image
               src={DegenFarmImage}
               alt="degen farm cover"
-              width={715}
-              className="max-w-[715px] w-full"
+              width={650}
+              className="max-w-[650px] w-full"
             />
           </Card>
         </div>
