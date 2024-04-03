@@ -68,7 +68,7 @@ const page = () => {
               <p>
                 <strong>Launch date:</strong>{" "}
                 <span>
-                  2023-04-03{" "}
+                  2024-04-03{" "}
                   <span className="badge badge-sm badge-error">Not Live</span>
                 </span>
               </p>
