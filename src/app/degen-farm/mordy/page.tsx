@@ -6,11 +6,9 @@ import GlowEffect from "@/components/GlowEffect";
 import Section from "@/components/Section";
 import TelegramLogo from "@/components/TelegramLogo";
 import Title from "@/components/Title";
-import TrendUpIcon from "@/components/TrendUpIcon";
 import TwitterLogo from "@/components/TwitterLogo";
 import EnjoyOGNFTBenefits from "@/sections/shared/EnjoyOGNFTBenefits";
 import TokenPromises from "@/sections/shared/TokenPromises";
-import baseConfig from "@/util/baseConfig";
 import routes from "@/util/routes";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -162,9 +160,8 @@ const page = () => {
               <p>
                 <strong>Team allocation:</strong> 200,000,000 (20%)
                 <p className="text-xs italic">
-                  Team allocation is vested for 10 days. Vesting ends on April
-                  13. Team allocation will be used in conjuction with the
-                  marketing allocation.
+                  Team allocation will be used in conjuction with the marketing
+                  allocation.
                 </p>
               </p>
               <p>
