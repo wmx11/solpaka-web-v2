@@ -103,18 +103,30 @@ const page = () => {
               </div>
 
               <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
-                <GetOnRaydiumButton disabled />
+                <GetOnRaydiumButton href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=CXb92fEG87ziY8h2U9S2kg5eNfFHH2bHTDNfCQ2VJeT3&fixed=in" />
                 <GetOnJupiterButton disabled />
               </div>
 
               <div className="flex items-center justify-between flex-wrap gap-4">
-                <a href="" target="_blank" className="link">
+                <a
+                  href="https://dexscreener.com/solana/ersdkcaqy7ax23ngstsu4wbyvwe8bjmbhc4hfeyqfxsb"
+                  target="_blank"
+                  className="link"
+                >
                   <span>Dexscreener</span>
                 </a>
-                <a href="" target="_blank" className="link">
+                <a
+                  href="https://www.dextools.io/app/en/solana/pair-explorer/ERsdKcaqy7AX23ngSTsu4wBYvwe8BjMBHc4hFeYQfXsB?t=1712167294250"
+                  target="_blank"
+                  className="link"
+                >
                   <span>Dextools</span>
                 </a>
-                <a href="" target="_blank" className="link">
+                <a
+                  href="https://birdeye.so/token/CXb92fEG87ziY8h2U9S2kg5eNfFHH2bHTDNfCQ2VJeT3?chain=solana"
+                  target="_blank"
+                  className="link"
+                >
                   <span>BirdEye</span>
                 </a>
               </div>
@@ -140,14 +152,22 @@ const page = () => {
               <p className="text-3xl underline mb-2">Token details</p>
               <p>
                 📜<strong>Contract address:</strong>{" "}
-                <a href="#" target="_blank" className="link break-all">
-                  ...
+                <a
+                  href="https://solscan.io/token/CXb92fEG87ziY8h2U9S2kg5eNfFHH2bHTDNfCQ2VJeT3"
+                  target="_blank"
+                  className="link break-all"
+                >
+                  CXb92fEG87ziY8h2U9S2kg5eNfFHH2bHTDNfCQ2VJeT3
                 </a>
               </p>
               <p>
                 🔓 <strong>Liquidity lock tx:</strong>{" "}
-                <a href="#" target="_blank" className="link break-all">
-                  ...
+                <a
+                  href="https://solscan.io/tx/Wp7XLnD4bJc2tb4xaP9bTzrSKr88ArMTsVyZnY2SkwVakaU7hHNg7rDkKDByfnFJj3Hnmb1HFkutGaZ3hmHxeyL"
+                  target="_blank"
+                  className="link break-all"
+                >
+                  Wp7XLnD4bJc2tb4xaP9bTzrSKr88ArMTsVyZnY2SkwVakaU7hHNg7rDkKDByfnFJj3Hnmb1HFkutGaZ3hmHxeyL
                 </a>
               </p>
             </Card>
