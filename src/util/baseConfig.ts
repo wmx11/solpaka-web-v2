@@ -18,6 +18,7 @@ const baseConfig = {
   twitter: "https://twitter.com/SOLPAKASolana",
   telegram: "https://t.me/Solpaka",
   discord: "https://discord.gg/tPyV6yRnTu",
+  discordNFTVerification: "https://discord.gg/Uhzy3FR3rD",
   raydium:
     "https://raydium.io/swap/?inputCurrency=sol&outputCurrency=BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo&fixed=in",
   jupiter:

@@ -13,13 +13,17 @@ const Hero = () => {
     <Section className="min-h-screen pattern-circles relative overflow-hidden">
       <Container className="flex flex-col-reverse md:flex-row flex-wrap gap-4 items-center justify-between z-10 relative">
         <div className="flex-1 space-y-8">
-          <h1 className="text-5xl md:text-6xl font-bold">
-            SOLPAKA aims to become the official "Unofficial" Solana mascot!
+          <h1 className="text-5xl md:text-6xl font-bold leading-relaxed">
+            SOLPAKA is more than a meme. It's the best community on Solana!
           </h1>
-          <h2 className="text-xl">
-            SOLPAKA does nothing. It's just chill like that.
-            <br />
-            Get SOLPAKA. Chill with SOLPAKA. Be a SOLPAKIAN. Grow fleece.
+          <h2 className="text-xl space-y-4">
+            SOLPAKA has one of the best and friendliest communities on Solana!
+            And they are not infected by Degenitus.
+            <br className="mb-2 block" />
+            <span className="underline">
+              Get Solpaka. Chill with Solpaka. Join the best community. Explore
+              new opportunities & grow fleece.
+            </span>
           </h2>
           <TokenPromises />
           <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">

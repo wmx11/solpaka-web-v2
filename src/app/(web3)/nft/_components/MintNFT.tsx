@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import Loader from "@/components/Loader";
 import WalletConnectButton from "@/components/WalletConnectButton";
@@ -18,7 +19,7 @@ const MintNFT = () => {
       return (
         <div className="flex items-center gap-2">
           <Loader />
-          Minting Your NFT 👀​
+          Minting Your NFT... 👀​
         </div>
       );
     }
@@ -59,6 +60,12 @@ const MintNFT = () => {
           <p className="text-xs text-error">{error}</p>
         </div>
       )}
+      <p className="text-xs text-accent-content py-2">
+        If you receive an error "Mint was unsuccessful, Signature ... has
+        expired: block height exceeded." Double check your wallet. You may have
+        received the NFT. If not - please try again. We highly suggest using
+        Phantom wallet.
+      </p>
     </div>
   );
 };

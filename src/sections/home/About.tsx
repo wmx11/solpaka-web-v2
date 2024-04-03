@@ -7,7 +7,10 @@ const About = () => {
   return (
     <Section className="bg-success pattern" id="about">
       <Container className="text-center text-base-100">
-        <Title>More Than Just A Meme</Title>
+        <div className="mb-8">
+          <Title className="mb-2">More Than Just A Meme</Title>
+          <h2 className="text-xl">We are changing the narrative</h2>
+        </div>
         <div className="space-y-4">
           <p>
             SOLPAKA is a community-driven token aiming to build a strong and

@@ -81,6 +81,47 @@ const page = () => {
               </p>
             </div>
 
+            <Card className="space-y-8">
+              <TokenPromises />
+              <div className="flex items-center flex-wrap gap-4">
+                <a
+                  href="https://twitter.com/MordySolana"
+                  target="_blank"
+                  className="link"
+                >
+                  <span className="badge badge-secondary p-4 gap-2">
+                    <TwitterLogo /> Twitter
+                  </span>
+                </a>
+                <a
+                  href="https://t.me/mordy_solana"
+                  target="_blank"
+                  className="link"
+                >
+                  <span className="badge badge-secondary p-4 gap-2">
+                    <TelegramLogo /> Telegram
+                  </span>
+                </a>
+              </div>
+
+              <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
+                <GetOnRaydiumButton disabled />
+                <GetOnJupiterButton disabled />
+              </div>
+
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <a href="" target="_blank" className="link">
+                  <span>Dexscreener</span>
+                </a>
+                <a href="" target="_blank" className="link">
+                  <span>Dextools</span>
+                </a>
+                <a href="" target="_blank" className="link">
+                  <span>BirdEye</span>
+                </a>
+              </div>
+            </Card>
+
             <Card>
               <p className="text-3xl underline mb-2">Launch details</p>
               <p>
@@ -138,39 +179,6 @@ const page = () => {
               <p>
                 <strong>LP Allocation:</strong> 700,000,000 (70%)
               </p>
-            </Card>
-            <Card className="space-y-8">
-              <p className="text-3xl underline">Links</p>
-              <TokenPromises />
-              <div className="flex items-center flex-wrap gap-4">
-                <a href="" target="_blank" className="link">
-                  <span className="badge badge-secondary p-4 gap-2">
-                    <TwitterLogo /> Twitter
-                  </span>
-                </a>
-                <a href="" target="_blank" className="link">
-                  <span className="badge badge-secondary p-4 gap-2">
-                    <TelegramLogo /> Telegram
-                  </span>
-                </a>
-              </div>
-
-              <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
-                <GetOnRaydiumButton disabled />
-                <GetOnJupiterButton disabled />
-              </div>
-
-              <div className="flex items-center justify-between flex-wrap gap-4">
-                <a href="" target="_blank" className="link">
-                  <span>Dexscreener</span>
-                </a>
-                <a href="" target="_blank" className="link">
-                  <span>Dextools</span>
-                </a>
-                <a href="" target="_blank" className="link">
-                  <span>BirdEye</span>
-                </a>
-              </div>
             </Card>
           </div>
         </Container>

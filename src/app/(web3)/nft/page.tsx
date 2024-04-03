@@ -12,6 +12,9 @@ import AboutNFT from "./_components/AboutNFT";
 import MintedImage from "./_components/MintedImage";
 import MintNFT from "./_components/MintNFT";
 import NFTStats from "./_components/NFTStats";
+import BaseButton from "@/components/Button";
+import DiscordLogo from "@/components/DiscordLogo";
+import baseConfig from "@/util/baseConfig";
 
 const page = () => {
   return (
@@ -72,6 +75,20 @@ const page = () => {
               </div>
               <div className="space-y-4 mb-8 card bg-accent border-2 border-yellow-300 shadow-yellow-600 p-4 shadow-md text-accent-content">
                 <MintNFT />
+              </div>
+              <div className="space-y-4 mb-8 card bg-accent border-2 border-yellow-300 shadow-yellow-600 p-4 shadow-md text-accent-content">
+                <p className="flex items-center gap-2 flex-wrap">
+                  Verify your NFT and access the Inner Circle community on
+                  <a href={baseConfig.discordNFTVerification} target="_blank">
+                    <BaseButton className="w-auto btn-sm">
+                      <DiscordLogo /> Discord
+                    </BaseButton>
+                  </a>
+                </p>
+                <p className="text-xs">
+                  Get access to alpha news, first-hand updates, community chats
+                  and new opportunities (Including Degen Farm).
+                </p>
               </div>
               <div className="alert alert-warning">
                 <svg

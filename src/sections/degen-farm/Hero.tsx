@@ -38,7 +38,7 @@ const Hero = () => {
               <div>Community members</div>
             </Card>
             <Card>
-              <div className="text-4xl">+130</div>
+              <div className="text-4xl">+150</div>
               <div>NFT Holders</div>
             </Card>
             <Card>

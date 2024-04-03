@@ -1,5 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import BaseButton from "@/components/Button";
+import baseConfig from "@/util/baseConfig";
+
 const AboutNFT = () => {
   return (
     <>
@@ -16,9 +19,14 @@ const AboutNFT = () => {
           <strong>Max per wallet: </strong> <u>10 NFTs</u>
         </p>
         <p>
-          <strong>Mint requirements:</strong>
-          <p>
+          <strong className="text-error">Mint requirements:</strong>
+          <p className="mb-2">
             <u>Hold at least 50,000 SOLPAKA tokens at the time of mint.</u>
+          </p>
+          <p>
+            <a href={baseConfig.jupiter} className="link" target="_blank">
+              <BaseButton>Get Solpaka on Jupiter</BaseButton>
+            </a>
           </p>
         </p>
       </p>
