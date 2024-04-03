@@ -41,7 +41,7 @@ const Projects = () => {
               <p>Mordy</p>
               <p className="flex items-start gap-2 flex-wrap">
                 Launch date: 2024-04-03{" "}
-                <span className="badge badge-sm badge-error">Not Live</span>
+                <span className="badge badge-sm badge-primary">Live</span>
               </p>
             </div>
           </div>
