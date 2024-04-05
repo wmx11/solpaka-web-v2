@@ -104,7 +104,7 @@ const page = () => {
 
               <div className="flex flex-wrap flex-col md:flex-row gap-4 [&>*]:flex-1 justify-between">
                 <GetOnRaydiumButton href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=CXb92fEG87ziY8h2U9S2kg5eNfFHH2bHTDNfCQ2VJeT3&fixed=in" />
-                <GetOnJupiterButton disabled />
+                <GetOnJupiterButton href="https://jup.ag/swap/SOL-CXb92fEG87ziY8h2U9S2kg5eNfFHH2bHTDNfCQ2VJeT3" />
               </div>
 
               <div className="flex items-center justify-between flex-wrap gap-4">
