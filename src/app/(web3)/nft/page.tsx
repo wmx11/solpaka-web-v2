@@ -13,7 +13,7 @@ import MintedImage from "./_components/MintedImage";
 import MintNFT from "./_components/MintNFT";
 import NFTStats from "./_components/NFTStats";
 import BaseButton from "@/components/Button";
-import DiscordLogo from "@/components/DiscordLogo";
+import DiscordLogo from "@/components/Logos/DiscordLogo";
 import baseConfig from "@/util/baseConfig";
 
 const page = () => {
