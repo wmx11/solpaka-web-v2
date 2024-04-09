@@ -13,11 +13,14 @@ const baseConfig = {
     "https://dexscreener.com/solana/6mprd9lm5yycftwlcxlnb5zrm5vnup3ffv3vqtvajaza",
   dextools:
     "https://www.dextools.io/app/en/solana/pair-explorer/6mPrd9LM5yycFTwLcXLNB5zrm5VNUp3fFv3vQtvaJAzA?t=1710530811725",
+  birdeye:
+    "https://birdeye.so/token/BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo?chain=solana",
   coinmarketcap: "https://coinmarketcap.com/currencies/solpaka/",
   coingecko: "https://www.coingecko.com/en/coins/solpaka",
   twitter: "https://twitter.com/SOLPAKASolana",
   telegram: "https://t.me/Solpaka",
   discord: "https://discord.gg/tPyV6yRnTu",
+  reddit: "https://www.reddit.com/r/solpaka/",
   discordNFTVerification: "https://discord.gg/Uhzy3FR3rD",
   raydium:
     "https://raydium.io/swap/?inputCurrency=sol&outputCurrency=BDHqX9YfJE3M6caox3obUX5YpWHz2cjnGFiZJtRghdCo&fixed=in",

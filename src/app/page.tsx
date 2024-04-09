@@ -16,8 +16,8 @@ export default function Home() {
       <Tokenomics />
       <NFT />
       <DegenFarm />
-      <Merch />
       <Roadmap />
+      <Merch />
     </>
   );
 }

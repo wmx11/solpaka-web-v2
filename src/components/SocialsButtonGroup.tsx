@@ -1,8 +1,8 @@
 import baseConfig from "@/util/baseConfig";
-import React from "react";
-import TelegramLogo from "./TelegramLogo";
-import TwitterLogo from "./TwitterLogo";
-import DiscordLogo from "./DiscordLogo";
+import DiscordLogo from "./Logos/DiscordLogo";
+import RedditLogo from "./Logos/RedditLogo";
+import TelegramLogo from "./Logos/TelegramLogo";
+import TwitterLogo from "./Logos/TwitterLogo";
 
 const SocialsButtonGroup = () => {
   return (
@@ -20,6 +20,11 @@ const SocialsButtonGroup = () => {
       <a href={baseConfig.discord} target="_blank">
         <button className="btn btn-secondary w-full">
           <DiscordLogo /> Join our Discord
+        </button>
+      </a>
+      <a href={baseConfig.reddit} target="_blank">
+        <button className="btn btn-secondary w-full">
+          <RedditLogo /> Join our Reddit
         </button>
       </a>
     </>

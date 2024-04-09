@@ -37,6 +37,9 @@ const Hero = () => {
             <a href={baseConfig.dextools} target="_blank" className="link">
               <span>Dextools</span>
             </a>
+            <a href={baseConfig.birdeye} target="_blank" className="link">
+              <span>BirdEye</span>
+            </a>
             <a href={baseConfig.coinmarketcap} target="_blank" className="link">
               <span>CoinMarketCap</span>
             </a>

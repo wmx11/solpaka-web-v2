@@ -70,7 +70,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("daisyui"), require("tailwindcss-animate")],
+  plugins: [
+    require("daisyui"),
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+  ],
   daisyui: {
     themes: ["bumblebee", "garden", "lemonade", "cupcake"],
   },
